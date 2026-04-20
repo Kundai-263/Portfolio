@@ -1,27 +1,21 @@
 body{
-    top: 0;
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #efefef; /* soft light grey */
 }
 
+/* NAVIGATION */
 .navigation{
     width: 100%;
     height: 60px;
-}
-
-.t{
-    font-size: 23px;
-}
-.picture img{
-    border-radius: 15px;
-}
-
-.navigation{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 30px;
-   
+    padding: 0 40px; /* fixed spacing instead of margin */
+}
+
+.navigation ul{
+    margin-right: 70px; /* moves menu slightly left */
 }
 
 .navigation ul li{
@@ -38,51 +32,249 @@ body{
 
 .name{
     margin: 10px;
-    font-size:25px ;
+    font-size:30px ;
     font-weight: bold;
-   
 }
 
+/* HERO SECTION */
 .container{
     display: flex;
     margin: 10px;
     justify-content: space-evenly;
 }
 
-.zita{
-    color: #0855b1;
+h1{
+    font-size: 32px;
 }
 
+/* TEXT */
+.t{
+    font-size: 23px;
+    color: #333; /* softer black */
+}
+
+.zita{
+    color: #2d6cdf; /* softer blue */
+}
+
+/* IMAGE */
+.picture img{
+    border-radius: 15px;
+    padding: 20px;
+}
+
+/* BUTTON */
 .button{
    padding: 10px 20px;
-   background-color:#0855b1 ;
+   background-color:#2d6cdf;
    border-radius: 15px;
    color: white;
    font-weight: bold;
+   border: none;
 }
 
-button:hover{
-    background-color: rgb(0, 208, 255);
+.button:hover{
+    background-color: #1fa3a3;
     cursor: pointer;
 }
+
+/* ABOUT SECTION */
 .aboutcontainer{
     display: flex;
     justify-content: center;
+    font-size: 23px;
+    color: #333; /* softer black */
+    
+     
 }
+
 .about{
-text-align: center;
+    text-align: center;
+    padding: 70px;
+    max-width: 750px;
+   
 
 }
+
 .aboutcontainer img{ 
     border-radius: 200px;
     width: 400px;
     height: 400px;
+     
+}
 
+/* CONTACT */
+.contactcontainer{
+    text-align: center;
 }
 
 
-.contactcontainer{
-text-align: center;
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+section{
+    margin-top: 100px;
+}
 
+.about p {
+    font-size: 20px;
+    max-width: 700px;
+}
+
+.socials a {
+    color: #aaaaaa;
+    margin: 0 10px;
+    font-size: 18px;
+}
+
+.socials a:hover {
+    color: rgba(255, 255, 255, 0.692);
+}
+.contact {
+    padding: 60px 20px;
+    background-color: white;
+}
+
+.contact-container {
+    max-width: 750px;
+    margin: auto;
+    text-align: center;
+    line-height: 1.6;
+    font-size: 20px
+}
+
+.contact-container h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.contact-info {
+    margin: 20px 0;
+    font-size: 20px;
+}
+
+.contact-info p {
+    margin: 8px 0;
+    color: #333;
+}
+
+.contact-buttons {
+    margin-top: 20px;
+}
+
+.contact-buttons .btn {
+    display: inline-block;
+    padding: 10px 18px;
+    margin: 5px;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.contact-buttons .btn:hover {
+    background-color: #333;
+}
+
+/* ================= RESPONSIVE DESIGN ================= */
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+
+    .navigation {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 20px;
+    }
+
+    .navigation ul {
+        margin: 10px 0;
+        padding: 0;
+    }
+
+    .navigation ul li {
+        display: block;
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .picture img {
+        width: 80%;
+        height: auto;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    .t {
+        font-size: 20px;
+    }
+
+    .aboutcontainer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .aboutcontainer img {
+        width: 250px;
+        height: 250px;
+        margin-bottom: 20px;
+    }
+
+    .about {
+        padding: 30px;
+    }
+
+    section {
+        margin-top: 60px;
+    }
+}
+
+
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+
+    .name {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .t {
+        font-size: 18px;
+    }
+
+    .button {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .picture img {
+        width: 90%;
+    }
+
+    .aboutcontainer img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .contact-container {
+        font-size: 18px;
+        padding: 0 10px;
+    }
+
+    .contact-buttons .btn {
+        display: block;
+        width: 80%;
+        margin: 10px auto;
+    }
 }
