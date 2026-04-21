@@ -176,24 +176,30 @@ section{
 
 /* ================= RESPONSIVE DESIGN ================= */
 
-/* Tablets (768px and below) */
 @media (max-width: 768px) {
 
     .navigation {
-        flex-direction: column;
+        flex-direction: column; /* stack name + menu */
+        align-items: center;
         height: auto;
         padding: 10px 20px;
     }
 
+    .name {
+        margin-bottom: 5px; /* brings name slightly above nav */
+    }
+
     .navigation ul {
-        margin: 10px 0;
+        display: flex; /* horizontal menu */
+        justify-content: center;
+        gap: 15px;
+        margin: 5px 0;
         padding: 0;
     }
 
     .navigation ul li {
-        display: block;
-        margin: 10px 0;
-        text-align: center;
+        display: inline; /* keep horizontal */
+        margin: 0;
     }
 
     .container {
@@ -232,17 +238,32 @@ section{
     }
 
     section {
-        margin-top: 60px;
+        margin: 50px 0; /* reduced spacing */
     }
 }
-
-
-/* Mobile (480px and below) */
 @media (max-width: 480px) {
+
+    .navigation {
+        flex-direction: column;
+        align-items: center;
+    }
 
     .name {
         font-size: 22px;
         text-align: center;
+        margin-bottom: 5px; /* name slightly above nav */
+    }
+
+    .navigation ul {
+        display: flex; /* keep nav horizontal */
+        justify-content: center;
+        gap: 12px;
+        padding: 0;
+        margin: 5px 0;
+    }
+
+    .navigation ul li {
+        display: inline;
     }
 
     h1 {
@@ -276,5 +297,14 @@ section{
         display: block;
         width: 80%;
         margin: 10px auto;
+    }
+
+    /* 🔥 FIX FOOTER POSITION */
+    section {
+        margin: 40px 0; /* reduces big gaps */
+    }
+
+    .contact {
+        padding: 30px 15px; /* less vertical space */
     }
 }
